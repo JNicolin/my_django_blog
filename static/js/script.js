@@ -1,0 +1,1 @@
+console.log("Learning static files with Django");
