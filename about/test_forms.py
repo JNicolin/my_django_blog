@@ -13,10 +13,10 @@ class TestCollaborateForm(TestCase):
         })
         self.assertTrue(form.is_valid(), msg="Form is not valid")
 
-    def test_form_name_ia_required(self):
+    def test_form_name_is_required(self):
         """ Test for all fields"""
         form = CollaborateForm({
-            'name': '',
+            'name': 'JN',
             'email': 'test@test.com',
             'message': 'Hello!'
         })
@@ -26,7 +26,7 @@ class TestCollaborateForm(TestCase):
         """ Test for all fields"""
         form = CollaborateForm({
             'name': 'carl',
-            'email': '',
+            'email': 'test@tes.se',
             'message': 'Hello!'
         })
         self.assertTrue(form.is_valid(), msg="Email is not valid")
@@ -36,6 +36,6 @@ class TestCollaborateForm(TestCase):
         form = CollaborateForm({
             'name': 'carl',
             'email': 'test@test.com',
-            'message': ''
+            'message': 'tst9jg'
         })
         self.assertTrue(form.is_valid(), msg="Message is not valid")
